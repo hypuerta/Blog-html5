@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head manifest="/manifiesto/manifiesto.cache">
+		<title>Weblod de Herley Puerta</title>
+		<meta name="description" content="Weblog de Herley Puerta" />
+		<meta name="keywords" content="weblog, blog, Herley Puerta, diseño, multimedia" />
+		<!--<meta http-equiv="refresh" content="1" /> -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	</head>
+	<body>
+		<div id="cajaheader">
+		</div>
+		<div id="principal" itempscope itemtype="http://www.data-vocabulary.org/Person">
+			<header>
+				<div id ="logo"> <img src="img/logo.png"></div>
+					<h1><span itemprop="name">Herley Puerta Caicedo</span></h1> -
+					<h2><span itemprop="title"> Ingeniero de sistemas</span></h2>
+				<nav>
+					<ul>
+						<li><a href="index.html"><canvas id="iconoinicio" width="50" height="50" style="border:1px solid black"></canvas><br/>Inicio </a></li>
+						<li><a href="noticias.html"><canvas id="icononoticias" width="50" height="50" style="border:1px solid black"></canvas><br />Noticias </a></li>
+						<li><a href="sobremi.html"><canvas id="iconosobremi" width="50" height="50" style="border:1px solid black"> </canvas><br />Sobre mi </a></li>
+						<li><a href="contacto.html"><canvas id="iconocontacto" width="50" height="50" style="border:1px solid black"></canvas><br />Contacto </a></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="contenido">
+				<form action="php/enviamail.php" method="post">
+					<table border=0>
+						<tr>
+							<td width=50%>
+								<p style="text-align:right;">Introduce tu nombre</p>
+							</td>
+							<td>
+								<input type="text" wigth=100% required name="nombre"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="text-align:right;">introduce tu e-mail</p>
+							</td>
+							<td>
+								<input type="email" wigth=100% value="ejemplo: usuario@dominio.com" name="email"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="text-align:right;">Introduce tu mensaje</p>
+							</td>
+							<td>
+								<textarea cols=48 rows=6 name="mansaje"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+							<td>
+								<input type="submit" value="enviar">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+				<footer>
+					<h6>
+						<div class="vcard">
+							<div><span class="name">Herley Puerta</span>-<span class="locality">Pereira</span>-</span class="country-name">Colombia</span></div>
+							<div><span class="tel">000000</span>-<span class="email">hypuerta@gotmail.com</span></div>
+						</div>
+					</h6>
+					<script type="text/javascript">
+						if(localStorage.pagecount){
+							localStorage.pagecount = Number(localStorage.pagecount)+1;
+						}else{localStorage.pagecount = 1;}
+						document.write("Has visitado mi pagina: " + localStorage.pagecount +" veces");
+					</script>
+					<script type="text/javascript">
+						if(sessionStorage.pagecount){sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;}else{sessionStorage.pagecount = 1;}
+						document.write("Has visitado mi pagina: " + sessionStorage.pagecount +" veces en esta seccion");
+					</script>
+				</footer>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var micolor = "black";
+	var micolor2 = "grey";
+	var micolor3 = "white";
+	var escala = 0.5;
+	var c=document.getElementById("iconosobremi");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*25,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*90,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+	var c=document.getElementById("iconocontacto");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50-10,escala*25,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50-10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+	cxt.fillStyle=(micolor2);
+	cxt.beginPath();
+	cxt.arc(escala*50+10,escala*25,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+	cxt.fillStyle=(micolor2);
+	cxt.beginPath();
+	cxt.arc(escala*50+10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+
+	var c=document.getElementById("iconoinicio");
+	var cxt=c.getContext("2d");
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*45,escala*40,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor3);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*45,escala*30,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*45,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+
+	var c=document.getElementById("icononoticias");
+	var cxt=c.getContext("2d");
+
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+	cxt.closePath;
+	cxt.fill();
+	cxt.fillStyle=(micolor);
+	cxt.beginPath();
+	cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false);
+	cxt.closePath;
+	cxt.fill();
+</script>

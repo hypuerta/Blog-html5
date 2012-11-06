@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head manifest="/manifiesto/manifiesto.cache">
 		<title>Weblod de Herley Puerta</title>
 		<meta name="description" content="Weblog de Herley Puerta" />
 		<meta name="keywords" content="weblog, blog, Herley Puerta, diseño, multimedia" />
@@ -8,84 +8,92 @@
 		<link rel="stylesheet" type="text/css" href="css/estilo.css" />
 	</head>
 	<body>
-		<div id="cahaheader">
+		<div id="cajaheader">
 		</div>
 		<div id="principal" itempscope itemtype="http://www.data-vocabulary.org/Person">
 			<header>
-				<div id ="logo"></div>
-				<h1><span itemprop="name">Herley Puerta Caicedo</span></h1>
-				<h2><span itemprop="title">Ingeniero desistemas</span></h2>
+				<div id ="logo"> <img src="img/logo.png"></div>
+					<h1><span itemprop="name">Herley Puerta Caicedo</span></h1> -
+					<h2><span itemprop="title"> Ingeniero de sistemas</span></h2>
 				<nav>
 					<ul>
-						<li><canvas id="iconoinicio" width="50" height="50" style="border:1px solid black"></canvas><a href="index.html">Inicio </a></li>
-						<li><canvas id="icononoticias" width="50" height="50" style="border:1px solid black"></canvas><a href="noticias.html">Noticias </a></li>
-						<li><canvas id="iconosobremi" width="50" height="50" style="border:1px solid black"> </canvas><a href="sobremi.html">Sobre mi </a></li>
-						<li><canvas id="iconocontacto" width="50" height="50" style="border:1px solid black"></canvas><a href="contacto.html">Contacto </a></li>
+						<li><a href="index.html"><canvas id="iconoinicio" width="50" height="50" style="border:1px solid black"></canvas><br/>Inicio </a></li>
+						<li><a href="noticias.html"><canvas id="icononoticias" width="50" height="50" style="border:1px solid black"></canvas><br />Noticias </a></li>
+						<li><a href="sobremi.html"><canvas id="iconosobremi" width="50" height="50" style="border:1px solid black"> </canvas><br />Sobre mi </a></li>
+						<li><a href="contacto.html"><canvas id="iconocontacto" width="50" height="50" style="border:1px solid black"></canvas><br />Contacto </a></li>
 					</ul>
 				</nav>
 			</header>
-			<section>
-				<span itemprop="photo"><img src="photo/images.jpg" width=50px height=50px /></span>
-				Soy un ingeniero de sistemas en constante aprendizaje <span itemprop="url"><a href="http://www.facebook.com/herley01>"http://www.facebook.com/herley01</a></span>
-			</section>
-			<aside>
-			<h5>Post previos</h5>
-				<ul>
-					<li><a href=""><time>2011-01-01</time> / Feliz año nuevo</a></li>
-					<li><a href=""><time>2010-12-12</time> / Curso HTML5</a></li>
-					<li><a href=""><time>2010-12-12</time> / Fotos de otoño</a></li>
-					<li><a href=""><time>2010-12-12</time> / Vacaciones de verano</a></li>
-				</ul>
-			</aside>
-			<section>
-				<article>
-					<time>2012-10-12</time>
-					<h3>De nuevo en la UTP</h3>
-					<h4>Aprendiendo y viajando en la <span itemprop="contact">UTP</span></h4>
-					<p>recorriendo el campus</p>
-				</article>
-					<time>2012-10-12</time>
-					<h3>Actualidad 3d</h3>
-					<h4>Blog 3D de Herley</h4>
-					<p>El blog de actualidad va cobrando forma</p>
-				<article>
-					<time>2012-10-12</time>
-					<h3>Sintel</h3>
-					<h4>Nuevo cortometraje de Blender Fundation</h4>
-					<p>Una vez mas blender foundation nos vuelve a sorprender con su calidad</p>
-					<video src="video/Google.ogv"controls="controls" width="300px" height="150px">				
-						Tu navegador no soporta video html5. Haz clic <a href="Google.com">aqui</a> para obtener una version compatible
-					</video>
-
-				</article>
-				<article>
-					<h3>Actualidad musical</h3>
-					<h4>Ultimo sorprendente tema</h4>
-					
-					<p>Convina el buen estilo que los caracteiza ahora con una propuesta innovadora</p>
-					<audio src="audio/0802.ogg" controls="controls">
-					Tu navegador no soporta audio
-					</audio>
-				</article>
-			</section>
-			<footer>
-				<h6>
-					<div class="vcard">
-						<div><span class="name">Herley Puerta</span>-<span class="locality">Pereira</span>-</span class="country-name">Colombia</span></div>
-						<div><span class="tel">000000</span>-<span class="email">hypuerta@gotmail.com</span></div>
-					</div>
-				</h6>
-				<script type="text/javascript">
-					if(localStorage.pagecount){
-						localStorage.pagecount = Number(localStorage.pagecount)+1;
-					}else{localStorage.pagecount = 1;}
-					document.write("Has visitado mi pagina: " + localStorage.pagecount +" veces");
-				</script>
-				<script type="text/javascript">
-					if(sessionStorage.pagecount){sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;}else{sessionStorage.pagecount = 1;}
-					document.write("Has visitado mi pagina: " + sessionStorage.pagecount +" veces en esta seccion");
-				</script>
-			</footer>
+			<div id="contenido">
+				<section id="sobremi">
+					<div id="mifoto"></div>
+					<p>Soy un ingeniero de sistemas en constante aprendizaje para visitar mi sitio
+						puede ir <a href="www.facebook.com/herley01">aqui</a></p>
+				</section>
+				<aside>
+					<h5>Post previos</h5>
+					<ul>
+						<li><a href=""><time>2011-01-01</time> / Feliz año nuevo</a></li>
+						<li><a href=""><time>2010-12-12</time> / Curso HTML5</a></li>
+						<li><a href=""><time>2010-12-12</time> / Fotos de otoño</a></li>
+						<li><a href=""><time>2010-12-12</time> / Vacaciones de verano</a></li>
+					</ul>
+				</aside>
+				<section>
+					<article>
+						<div id="logoutp"></div>
+						<time>2012-10-12</time>
+						<h3>De nuevo en la UTP</h3>
+						<h4>Aprendiendo y viajando en la <span itemprop="contact">UTP</span></h4>
+						<p>recorriendo el campus</p>
+					</article>
+					<article>
+						<div id="logoactualidad3d"></div>
+						<time>2012-10-12</time>
+						<h3>Actualidad 3d</h3>
+						<h4>Blog 3D de Herley</h4>
+						<p>El blog de actualidad va cobrando forma</p>
+					</article>
+					<article>
+						<div id="logoblender"></div>
+						<time>2012-10-12</time>
+						<h3>Sintel</h3>
+						<h4>Nuevo cortometraje de Blender Fundation</h4>
+						<p>Una vez mas blender foundation nos vuelve a sorprender con su calidad</p>
+						<video src="video/Google.ogv"controls="controls" width="300px" height="150px">				
+							Tu navegador no soporta video html5. Haz clic <a href="Google.com">aqui</a> para obtener una version compatible
+						</video>
+					</article>
+					<article>
+						<div id="mifotoarticulo"></div>
+						<time>2012-10-12</time>
+						<h3>Actualidad musical</h3>
+						<h4>Ultimo sorprendente tema</h4>
+						<p>Convina el buen estilo que los caracteiza ahora con una propuesta innovadora</p>
+						<audio src="audio/0802.ogg" controls="controls">
+							Tu navegador no soporta audio
+						</audio>
+					</article>
+				</section>
+			</div>
+				<footer>
+					<h6>
+						<div class="vcard">
+							<div><span class="name">Herley Puerta</span>-<span class="locality">Pereira</span>-</span class="country-name">Colombia</span></div>
+							<div><span class="tel">000000</span>-<span class="email">hypuerta@gotmail.com</span></div>
+						</div>
+					</h6>
+					<script type="text/javascript">
+						if(localStorage.pagecount){
+							localStorage.pagecount = Number(localStorage.pagecount)+1;
+						}else{localStorage.pagecount = 1;}
+						document.write("Has visitado mi pagina: " + localStorage.pagecount +" veces");
+					</script>
+					<script type="text/javascript">
+						if(sessionStorage.pagecount){sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;}else{sessionStorage.pagecount = 1;}
+						document.write("Has visitado mi pagina: " + sessionStorage.pagecount +" veces en esta seccion");
+					</script>
+				</footer>
 		</div>
 	</body>
 </html>
@@ -166,5 +174,4 @@
 	cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false);
 	cxt.closePath;
 	cxt.fill();
-
 </script>
